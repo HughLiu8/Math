@@ -1,0 +1,9 @@
+https://www.opengl.org/discussion_boards/showthread.php/126482-Why-the-normal-vector-is-transformed-by-modelview-matrix-s-inverse
+
+Transforming Normals
+Normal vectors don't transform in the same way as vertices, or position vectors. Mathematically, it's better to think of normal vectors not as vectors, but as planes perpendicular to those vectors. Then, the transformation rules for normal vectors are described by the transformation rules for perpendicular planes. 
+A homogeneous plane is denoted by the row vector (a , b, c, d), where at least one of a, b, c, or d is nonzero. If q is a nonzero real number, then (a, b, c, d) and (qa, qb, qc, qd) represent the same plane. A point (x, y, z, w)T is on the plane (a, b, c, d) if ax+by+cz+dw = 0. (If w = 1, this is the standard description of a euclidean plane.) In order for (a, b, c, d) to represent a euclidean plane, at least one of a, b, or c must be nonzero. If they're all zero, then (0, 0, 0, d) represents the "plane at infinity," which contains all the "points at infinity." 
+
+If p is a homogeneous plane and v is a homogeneous vertex, then the statement "v lies on plane p" is written mathematically as pv = 0, where pv is normal matrix multiplication. If M is a nonsingular vertex transformation (that is, a 4 ¡Á 4 matrix that has an inverse M-1), then pv = 0 is equivalent to pM-1Mv = 0, so Mv lies on the plane pM-1. Thus, pM-1 is the image of the plane under the vertex transformation M. 
+
+If you like to think of normal vectors as vectors instead of as the planes perpendicular to them, let v and n be vectors such that v is perpendicular to n. Then, nTv = 0. Thus, for an arbitrary nonsingular transformation M, nTM-1Mv = 0, which means that nTM-1 is the transpose of the transformed normal vector. Thus, the transformed normal vector is (M-1)Tn. In other words, normal vectors are transformed by the inverse transpose of the transformation that transforms points. 
