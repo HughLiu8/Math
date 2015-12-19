@@ -1,0 +1,8 @@
+1. Matrix effect Sequence - 23 Math for Game Developers - Prop Positioning (TRS Matrices)
+
+number 1:Scaling
+number 2:Rotation
+number 3:Translation
+But take it to equation, it become: Translation * Rotation * Scaling * V
+
+Because the one nearest to the v will first make effect.
