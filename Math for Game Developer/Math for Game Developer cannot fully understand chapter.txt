@@ -1,6 +1,0 @@
-14.Math for Game Developers - Mouse Control (Euler Angles)
-17.Math for Game Developers - Bullet Whizzes (Projections)
-19.Math for Game Developers - Character Movement 8 
-21.Math for Game Developers - Rotating Characters (Matrix Rotation)
-24.Math for Game Developers - Updated Bullet Collisions (Coordinate Systems)   
-	last step - why multiply inverse matrix to the end of equation, not in the beginning
